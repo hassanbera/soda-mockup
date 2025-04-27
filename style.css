@@ -1,0 +1,40 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.banner{
+  width: 100vw;              /* tüm viewport genişliği */
+  height: 100vh;             /* tüm viewport yüksekliği */
+  overflow: hidden;
+  position: relative;
+  background: url(./images/background.jpg);
+  background-size: cover;
+  background-position: center;
+ 
+}
+
+.banner .product{
+  width: 500px;
+  height: 500px;
+  position: absolute;
+  bottom: 170px;
+  left: 50%;
+  transform: translate(-50%);
+  z-index: 1;
+  transition: 0.7s;
+
+}
+
+.banner .product .soda{
+  background: url(./images/freepik__upload__45190.png);
+  background-size: auto 100%;
+
+  width: 500px;
+  height: 100%;
+
+  
+}
+
