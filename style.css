@@ -8,20 +8,20 @@ html, body {
 .banner{
   width: 100vw;              /* tüm viewport genişliği */
   height: 100vh;             /* tüm viewport yüksekliği */
-  overflow: hidden;
+  overflow: hidden;          /* taşan kısımları gizle */
+  display: flex;            /* flexbox kullanımı */
   position: relative;
-  background: url(./images/background.jpg);
+  background: url(./images/soda-background.png) no-repeat;
   background-size: cover;
-  background-position: center;
  
 }
 
 .banner .product{
-  width: 500px;
+  width: 800px;
   height: 500px;
   position: absolute;
   bottom: 170px;
-  left: 50%;
+  left: 80%;
   transform: translate(-50%);
   z-index: 1;
   transition: 0.7s;
@@ -29,11 +29,27 @@ html, body {
 }
 
 .banner .product .soda{
-  background: url(./images/freepik__upload__45190.png);
-  background-size: auto 100%;
+  background:
+  url(./images/freepik__upload__45190.png),
+  url(./images/soda-mockup.png) -800px, 0;
+
+  background-size: contain, cover;
+  background-blend-mode: multiply;
+  mask-image: url(./images/freepik__upload__45190.png);
+  mask-size:  contain; 
+  mask-position: center;
+
+  mask-repeat: no-repeat;
+  aspect-ratio: 1/1;
+ 
+  background-repeat: no-repeat, no-repeat;
+  background-position: center, center;
+  background-size: contain, cover;
+  background-size: cover;
 
   width: 500px;
   height: 100%;
+  
 
   
 }
